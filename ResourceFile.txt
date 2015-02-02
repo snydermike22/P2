@@ -1,0 +1,21 @@
+Sites Uses.
+
+Google.com
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+http://jsonlint.com/
+http://api.jquery.com/
+https://developer.mozilla.org/en-US/docs/Web/API/Element
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+http://getbootstrap.com/css/
+http://www.w3schools.com/
+http://www.w3schools.com/js/
+https://www.google.com/fonts
+https://piazza.com/class/i4nat74xz7tsx?cid=43
+http://d3js.org/
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+http://validator.w3.org/#validate_by_input
+http://maettig.com/?page=PHP/CSS_Color_Converter
+
+
+Did lots of random searches on Google.com for HTML formatting, Table, code, line, color heading etc.. Used Google search a lot	
