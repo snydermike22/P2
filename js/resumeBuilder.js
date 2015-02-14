@@ -21,9 +21,6 @@ var work = {
 "•	Maintain Credit Card payment intranet application using Java Script, VB Script and HTML within ASP pages.",
 "•	Create and maintain SQL and Visual Basic applications for reporting and maintenance of system.",
 "•	Operational Support of multi- tier client server production intranet application."]
-
-
-
 	},
 	{
 		"employer": "Travelers Insurance",
@@ -43,8 +40,6 @@ var work = {
 "•	Managed, handled, delegated and responded to all Presidential annuity complaints received at Travelers",
 "•	Wrote specifications for new Imaging system being implemented for year 2000",
 "•	Performed daily client reporting tasks, which included: balancing 1099R system; creating specifications for system version releases; Quarterly Statement enhancements; and testing of new products"]
-
-
 	},
 	{
 		"employer": "ITT Hartford",
@@ -62,8 +57,6 @@ var work = {
 "•	Calculated distributions on client’s accounts for broker/dealer representatives",
 "•	Served as a liaison between broker/dealers and representatives",
 "•	Managed multi-million dollar market timer accounts"]
-
-
 	}
 	]
 }
@@ -97,8 +90,11 @@ var bio = {
 		"github": "https://github.com/snydermike22",
 		"location": "227 Lucille St, Newington CT 06111 "
 			},
-	"skills": ["Microsoft Office", "SQL", "HTML", "CSS", "JavaScript", "Unix", "Visual Basic", "ASP", "git", "Github", "Cold Fusion"]
+	"skills": ["Microsoft Office", "HTML", "CSS", "JavaScript", "JQueary", "git", "Github", "Focus"]
 	}
+
+
+
 
 var formattedwelcome = HTMLWelcomeMsg.replace("%data%",bio.welcomeMessage);
 var formattedName = HTMLheaderName.replace("%data%",bio.name);
@@ -111,14 +107,25 @@ var formattedgithub = HTMLgithub.replace("%data%",bio.contacts.github);
 var formattedMobileEmailLoc = (formattedMobile +formattedEmail + formattedLocation + formattedgithub);
 
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+//bio code
+bio.display = function () {
+		$("#header").prepend(formattedRole);
+		$("#header").prepend(formattedName);
+		$("#header").append(fomattedPicture);
+		$("#header").append(formattedwelcome);
+		$("#bioExperience").append(formattedMobileEmailLoc);
 
+		if (bio.skills.length > 0) {
+			$("#bioExperience").append(HTMLbioStart);
+				for (skill in bio.skills) {
+					var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+					$("#bioExperience").append(formattedSkill);
+				}
+			}
+					$("#SkillSet").prepend(HTMLskillsStart);
+}
 
-
-$("#header").append(formattedMobileEmailLoc);
-$("#header").append(fomattedPicture);
-$("#header").append(formattedwelcome);
+bio.display();
 
 
 var education = {
@@ -156,19 +163,8 @@ var education = {
 	]
 }
 
-//
-if (bio.skills.length > 0) {
-	$("#SkillSet").prepend(HTMLskillsStart);
-
-//	for (skill in bio.skills) {
-	
-//	var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-//	$("#SkillSet").append(formattedSkill);
-//	}
-
-}
-
-function displayWork() {
+// work code
+work.display = function () {
 	for (job in work.jobs) {
 	//create new div for work experience
 	$("#workExperience").append(HTMLworkStart);
@@ -193,16 +189,8 @@ function displayWork() {
 					var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description[desc]);
 					$(".work-entry:last").append(formattedDescription);
 				}
-//
-
-//	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-//	$(".work-entry:last").append(formattedDescription);
 	
-}	
-	}
-
-displayWork();
-
+	}	
 
 //This is the loop function to read locations in an array.
 function locationizer(work_obj) {
@@ -216,9 +204,12 @@ return tmpArray;
 
 var work_obj = "";
 locationizer(work_obj);
+}
+
+work.display();
+
 
 //function to internationalize the Name
-
 
 function inName(name) {
 	
@@ -238,7 +229,7 @@ document.getElementById('name').innerHTML = formattedName;
 
 }
 
-
+// projects code
 projects.display = function	() {
 	//display code goes here
 		

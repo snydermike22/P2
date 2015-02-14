@@ -27,8 +27,9 @@ var HTMLlocation = '<li.style.cssFloat = "left" class="flex-item"><span class="o
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<p class="welcome-message"><span >%data%</span></p>';
 
-var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance with # of years experience</h3><ul id="skills" class="flex-box"></ul>';
+var HTMLskillsStart = '<h3 id="skillsH3">Interactive Skills at a Glance with # of years experience</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLbioStart = '<h4 id="skillsH3">List of Skills</h4><ul id="skills"class="flex-box"></ul>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a>%data%';

@@ -51,13 +51,21 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="header" class="center-content clearfix">
       <ul id="topContacts" class='flex-box'></ul>
     </div>
-<a href="#p1" class="jumpto" style = "margin-left: 50px; ">Work Experience</a>
+    <div>
+<a href="#p0" class="jumpto">Bio</a>
+<a href="#p1" class="jumpto">Work Experience</a>
 <a href="#p2" class="jumpto">Projects</a>
 <a href="#p3" class="jumpto">Education</a>
-<a href="#p4" class="jumpto">Interactive Map</a>
-<a href="#p5" class="jumpto">Skill Set</a>
+<a href="#p4"class="jumpto">Interactive Map</a>
+<a href="#p5"class="jumpto">Skill Set</a>
+</div>
 <a name="p5"></a>
-    <div style='clear: both;'></div>
+    <div style='clear: both;'>
+    </div>
+    <div id="bioExperience" class='light-gray'>
+       <a name="p0"></a>
+      <h2>Bio</h2>
+    </div>
       <div id="SkillSet" class='light-gray'>
         <div>
           <object type="text/html" data="Bubble.html" width="90%" height="600px" style="overflow:auto;border:5px ridge blue">
@@ -74,7 +82,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <h2>Projects</h2>
     </div>
     <a name="p3"></a>
-    <div id="education" class='ed-light-gray'>
+    <div id="education" class='light-gray'>
       <h2>Education</h2>
     </div>
     <a name="p4"></a>
@@ -122,6 +130,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     }
     if(document.getElementsByTagName('h1').length === 0) {
       document.getElementById('header').style.background = 'black';
+    }
+     if(document.getElementsByClassName('bio-entry').length === 0) {
+      document.getElementById('bioExperience').style.background = 'gray';
     }
     if(document.getElementsByTagName('bubbles').length === 0) {
       document.getElementById('SkillSet').style.background = 'gray';
